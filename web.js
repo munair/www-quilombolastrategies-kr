@@ -19,7 +19,7 @@ app.post('/contact', function(request, response) {
   var name = request.body.name;
   var email = request.body.email;
   var comments = request.body.comments;
-  var out = "contact name: " + name + "\tcontact email: " + email + "\tmobile: " + mobile + "\treferral: " + referral + "\tvalidation: " + validation "\n";
+  var out = "contact name: " + name + "\tcontact email: " + email + "\tmobile: " + mobile + "\treferral: " + referral + "\tvalidation: " + validation + "\n";
 
   postmark.send({
     "From": "munair@quilombolarecreation.com",
