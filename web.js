@@ -18,7 +18,9 @@ app.get('/', function(request, response) {
 app.post('/contact', function(request, response) {
   var name = request.body.name;
   var email = request.body.email;
-  var comments = request.body.comments;
+  var mobile= request.body.mobile;
+  var referral= request.body.referral;
+  var validation= request.body.validation;
   var out = "contact name: " + name + "\tcontact email: " + email + "\tmobile: " + mobile + "\treferral: " + referral + "\tvalidation: " + validation + "\n";
 
   postmark.send({
