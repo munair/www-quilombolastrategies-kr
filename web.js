@@ -21,7 +21,7 @@ app.post('/contact', function(request, response) {
   var mobile= request.body.mobile;
   var referral= request.body.referral;
   var validation= request.body.validation;
-  var out = "contact name: " + name + "\tcontact email: " + email + "\tmobile: " + mobile + "\treferral: " + referral + "\tvalidation: " + validation + "\n";
+  var out = "contact name: " + name + "\ncontact email: " + email + "\nmobile: " + mobile + "\nreferral: " + referral + "\nvalidation: " + validation + "\n";
 
   postmark.send({
     "From": "munair@quilombolarecreation.com",
