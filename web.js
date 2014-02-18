@@ -24,8 +24,8 @@ app.post('/contact', function(request, response) {
   var out = "contact name: " + name + "\ncontact email: " + email + "\nmobile: " + mobile + "\nreferral: " + referral + "\nvalidation: " + validation + "\n";
 
   postmark.send({
-    "From": "munair@quilombolarecreation.com",
-    "To": "info@quilombolarecreation.com",
+    "From": "munair@quilombolarecreation.kr",
+    "To": "info@quilombolarecreation.kr",
     "Subject": "Quilombola Recreation Information Request",
     "TextBody": out,
     "Tag": "registrant"
