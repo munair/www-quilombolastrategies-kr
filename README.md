@@ -1,7 +1,7 @@
-www-quilombolarecreation-kr
+www-quilombolastrategies-com
 ===========================
 
-Repository for quilombolarecreation.kr domain.
+Repository for quilombolastrategies.com domain.
 
 To clone this repository on a new AWS EC2 instance --
 
@@ -99,7 +99,7 @@ sleep 5
 git merge development
 git push origin staging
 cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
-heroku git:remote -a staging-quilombolarecreation-kr -r staging-heroku
+heroku git:remote -a dev-quilombolastrategies-com -r staging-heroku
 git push staging-heroku staging:master
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the master GitHub repository and the production instance on Heroku? " yn
@@ -114,12 +114,12 @@ git branch
 sleep 5
 git merge staging
 git push origin master
-heroku git:remote -a www-quilombolarecreation-kr -r production-heroku
+heroku git:remote -a www-quilombolastrategies-com -r production-heroku
 git push production-heroku master:master
 git checkout development
 
 
 ```
 
-See also http://www.quilombolarecreation.kr and [Heroku](https://www.heroku.com) for more details.
+See also http://www.quilombolastrategies.com and [Heroku](https://www.heroku.com) for more details.
 
