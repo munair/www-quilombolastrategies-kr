@@ -11,33 +11,30 @@ app.use("/js", express.static(__dirname + '/js'));
 app.use("/css", express.static(__dirname + '/css'));
 app.use("/images", express.static(__dirname + '/images'));
 app.use("/fonts", express.static(__dirname + '/fonts'));
+app.use("/sounds", express.static(__dirname + '/sounds'));
 
 app.get('/', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/services', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
 app.get('/proprietor', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/faq', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
 app.get('/contact', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/inc_services.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_services.html', 'utf-8'); response.send(htmlBuffer); });
 app.get('/inc_proprietor.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_proprietor.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/inc_faq.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_faq.html', 'utf-8'); response.send(htmlBuffer); });
 app.get('/inc_contact.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_contact.html', 'utf-8'); response.send(htmlBuffer); });
 
 app.post('/contact', function(request, response) {
   var name = request.body.name;
   var email = request.body.email;
   var mobile = request.body.mobile;
-  var referral = request.body.referral;
+  var message = request.body.message;
   var validation = request.body.validation;
   var out = 'contact name: ' + name 
           + '\ncontact email: ' + email 
           + '\nmobile: ' + mobile 
-          + '\nreferral: ' + referral
+          + '\nmessage: ' + message
           + '\nvalidation: ' + validation 
           + '\n';
   postmark.send({
-    "From": "zumbi@cdoseoul.kr",
-    "To": "info@cdoseoul.kr",
-    "Subject": "Free Class Signup [www.cdoseoul.kr]",
+    "From": "info@quilombola.com",
+    "To": "munair@quilombola.com",
+    "Subject": "Contact from www.quilombola.com",
     "TextBody": out,
     "Tag": "registrant"
   }, function(error, success) {
