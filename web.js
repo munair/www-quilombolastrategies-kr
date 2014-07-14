@@ -14,9 +14,9 @@ app.use("/fonts", express.static(__dirname + '/fonts'));
 app.use("/sounds", express.static(__dirname + '/sounds'));
 
 app.get('/', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/proprietor', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/about', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
 app.get('/contact', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/inc_about.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_proprietor.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/inc_about.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_about.html', 'utf-8'); response.send(htmlBuffer); });
 app.get('/inc_contact.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_contact.html', 'utf-8'); response.send(htmlBuffer); });
 
 app.post('/contact', function(request, response) {
