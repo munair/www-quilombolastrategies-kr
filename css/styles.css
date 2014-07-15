@@ -44,8 +44,8 @@ strong {font-weight:600;}
 @keyframes imageAnimation { 0% { animation-timing-function: ease-in; } 100% {  transform: scale(1.06); animation-timing-function: ease-out; }}
 
 .menu {font-family: 'NeuropolXFreeRegular', sans-serif;position:fixed;top:5px;left:0;animation: fadein 3s;-moz-animation: fadein 3s; -webkit-animation: fadein 3s;-o-animation: fadein 3s;display:none;width:900px;}
-.menu a {position: relative;display: inline-block;margin: 15px 25px;outline: none;color: #ffffff;text-decoration: none;text-transform: uppercase;letter-spacing: 1px;font-weight: 400;text-shadow: 0 0 1px rgba(0,0,0,0.1);font-size: 11px;}
-.menu a::before {color: #ffcc00;content: attr(data-name);position: absolute;opacity: 0;text-shadow: 0 0 5px rgba(0,0,0,1);-webkit-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);-moz-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;-moz-transition: -moz-transform 0.3s, opacity 0.3s;transition: transform 0.3s, opacity 0.3s;pointer-events: none;}
+.menu a {position: relative;display: inline-block;margin: 15px 25px;outline: none;color: #000000;text-decoration: none;text-transform: uppercase;letter-spacing: 1px;font-weight: 400;text-shadow: 0 0 1px rgba(255,255,255,0.1);font-size: 11px;}
+.menu a::before {color: #ffcc00;content: attr(data-name);position: absolute;opacity: 0;text-shadow: 0 0 5px rgba(255,255,255,1);-webkit-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);-moz-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;-moz-transition: -moz-transform 0.3s, opacity 0.3s;transition: transform 0.3s, opacity 0.3s;pointer-events: none;}
 .menu a#current::before,.menu a:hover::before,.menu a:focus::before {-webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);-moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);opacity: 1;outline: none;}
 
 .services {font-family: 'NeuropolXFreeRegular', sans-serif;position:fixed;bottom:50%;left:60px;animation: fadein 3s;-moz-animation: fadein 3s; -webkit-animation: fadein 3s;-o-animation: fadein 3s;display:none;z-index:9999;}
@@ -58,9 +58,9 @@ strong {font-weight:600;}
 .logo {position:fixed;z-index:99999;right:50px;bottom:25px;animation: fadein 3s;-moz-animation: fadein 3s; -webkit-animation: fadein 3s;-o-animation: fadein 3s;display:none;}
 .bg {position:fixed;z-index:-1;display:none;top:0;left:0;right:0;bottom:0;background:url(../images/background.jpg) repeat-x top;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
 
-#content {position:absolute;width:520px;max-width:520px;left:-520px;top:100px;bottom:20px;padding-right:5%;color:#fff;font-family: 'NeuropolXFreeRegular', sans-serif;animation: slidein 1s;-moz-animation: slidein 1s; -webkit-animation: slidein 1s;-o-animation: slidein 1s;display:none;overflow: auto;}
+#content {position:absolute;width:520px;max-width:520px;left:-520px;top:100px;bottom:20px;padding-right:5%;color:#000;font-family: 'NeuropolXFreeRegular', sans-serif;animation: slidein 1s;-moz-animation: slidein 1s; -webkit-animation: slidein 1s;-o-animation: slidein 1s;display:none;overflow: auto;}
 #content h1 {font-family: 'NeuropolXFreeRegular';font-size:20px;font-weight:300;margin-bottom:20px;}
-#content p {font-family: 'Source Sans Pro';margin-bottom:10px;color:#ffffff;font-size:15px;line-height:22px;}
+#content p {font-family: 'Source Sans Pro';margin-bottom:10px;color:#000000;font-size:15px;line-height:22px;}
 #content p:last-child {margin:0;}
 #content p a {color:#ffcc00; text-decoration:none;border-bottom: 1px solid transparent;-webkit-transition: 0.5s ease;transition: 0.5s ease;}
 #content p a:hover {border-bottom: 1px solid #ffcc00;}
@@ -73,7 +73,7 @@ strong {font-weight:600;}
 #content .form {margin-top:10px;}
 #content .form textarea {width:210px;height:60px;float:left;margin-bottom:5px;padding:2px;-webkit-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px;-ms-border-radius:4px;}
 #content .form input{width:210px;float:left;margin-bottom:5px;padding:2px;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px;-ms-border-radius:4px;}
-#content .form label{text-align:left;width:120px;padding:2px;padding-right:10px;clear:both;display:block;float:left;margin-bottom:5px;color:#ccc;font-size:12px;text-transform:uppercase;}
+#content .form label{text-align:left;width:120px;padding:2px;padding-right:10px;clear:both;display:block;float:left;margin-bottom:5px;color:#000;font-size:12px;text-transform:uppercase;}
 #content .form input, #content .form textarea,#content .form select{background:rgba(0,0,0,.2);color:#ddd;font-size:12px;padding:5px;border:0;}
 #content .form br{clear:both;}
 #content .form .submit {width:120px;padding:6px 8px;float:left;display:block;overflow:hidden;margin-top:10px;text-decoration:none;background: rgba(0,0,0,.4);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#eee;border:0;-webkit-transition: all 200ms ease-in-out; -moz-transition: all 200ms ease-in-out; -o-transition: all 200ms ease-in-out; -ms-transition: all 200ms ease-in-out; transition: all 200ms ease-in-out;}
@@ -228,7 +228,7 @@ strong {font-weight:600;}
 #warning_swipe{z-index:1000;position:fixed;text-align:center;left:50%;top:50%;-moz-transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);background:rgba(0,0,0,.9);color:#fff;padding:20px;border-radius: 8px;font-size:1.3em;display:none;}
 #warning_swipe img {vertical-align: middle;margin-bottom:20px;}
 
-.mCSB_container{width:auto;margin-right:30px;overflow:hidden;color:#ffffff}
+.mCSB_container{width:auto;margin-right:30px;overflow:hidden;color:#000000}
 .mCSB_container.mCS_no_scrollbar{margin-right:0}
 .mCS_disabled>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar,.mCS_destroyed>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar{margin-right:30px}
 .mCustomScrollBox>.mCSB_scrollTools{width:16px;height:100%;top:0;right:0;opacity:.75;}
