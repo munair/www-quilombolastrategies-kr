@@ -66,7 +66,7 @@ sleep 5
 git merge staging
 git push origin master
 heroku apps:destroy www-quilombolastrategies-kr --confirm www-quilombolastrategies-kr
-heroku apps:create www-quilombolastrategies.kr
+heroku apps:create www-quilombolastrategies-kr
 heroku domains:add www.quilombolastrategies.kr --app www-quilombolastrategies-kr
 heroku git:remote -a www-quilombolastrategies-kr -r production-heroku
 git push production-heroku master:master
