@@ -31,6 +31,8 @@ sleep 5
 vi $1
 git add $1
 git commit -m "$2"
+git remote add origin https://github.com/munair/www-quilombolastrategies-kr.git
+git push -u origin master
 git push origin development
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the staging GitHub repository and the staging instance on Heroku? " yn
@@ -47,6 +49,7 @@ sleep 5
 git merge development
 git push origin staging
 cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
+git remote remove staging-heroku
 heroku apps:destroy dev-quilombolastrategies-kr --confirm dev-quilombolastrategies-kr
 heroku apps:create dev-quilombolastrategies-kr
 heroku domains:add dev.quilombolastrategies.kr --app dev-quilombolastrategies-kr
@@ -65,6 +68,7 @@ git branch
 sleep 5
 git merge staging
 git push origin master
+git remote remove production-heroku
 heroku apps:destroy www-quilombolastrategies-kr --confirm www-quilombolastrategies-kr
 heroku apps:create www-quilombolastrategies-kr
 heroku domains:add www.quilombolastrategies.kr --app www-quilombolastrategies-kr
