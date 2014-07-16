@@ -4,8 +4,6 @@
   "dependencies": {
     "express": "3.3.5",
     "postmark": "x.x.x",
-    "swig": "^1.1.0"
-    "node-curl": "^0.3.1"
   },
   "engines": {
     "node": "0.10.x",
